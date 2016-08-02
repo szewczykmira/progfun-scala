@@ -1,0 +1,13 @@
+console
+max(List(1,2,3,4,5))
+import example.Lists._
+import example.Lists.sum
+import example.Lists._
+example.Lists.sum(List(1,2,3))
+import example._
+import _
+import src.main.scala.example.Lists._
+import src._
+max(List(12,3,4))
+math.max(List(1,2,3))
+console
