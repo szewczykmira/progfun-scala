@@ -42,6 +42,7 @@ object Lists {
       def maxa(xs:List[Int]): Int = xs match {
         case x :: y :: ys => maxa(math.max(x,y)::ys)
         case x :: Nil => x
+        case Nil => throw new java.util.NoSuchElementException
       }
       maxa(xs)
     }
