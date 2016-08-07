@@ -20,7 +20,7 @@ object Main {
       
       if (column == 0 || column == row) 1 else
         factor(1, row) / (factor(1, column) * factor(1, row-column))
-  }
+    }
   
   /**
    * Exercise 2
@@ -38,10 +38,31 @@ object Main {
       }
       
       if(parse(0, chars) == 0) true else false 
-  }
+    }
   
   /**
    * Exercise 3
    */
-    def countChange(money: Int, coins: List[Int]): Int = ???
+    def countChange(money: Int, coins: List[Int]): Int = {
+      def count(elem:Int, coins:List[Int], acc:Int, lista:List[Int]): Int = {
+        if(coins.isEmpty) 
+          acc
+        else
+          if (elem < coins.head)
+            count(elem, coins.tail, acc, lista)
+          else
+            count(elem, coins.tail, acc + lista(coins.head - 1), lista)
+      }
+      
+      def fill(elem: Int, lista:List[Int]) : List[Int] = {
+        if(elem == money)
+          count(elem, coins, 0, lista) :: lista
+        else
+          fill(elem+1, count(elem, coins, 0, lista) :: lista)
+      } 
+      if (money == 0) 
+        1 
+      else 
+        fill(1, List(1))(0)
+    }
   }
