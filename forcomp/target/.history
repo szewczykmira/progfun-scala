@@ -2,3 +2,9 @@ console
 submit szewczyk.mira@gmail.com T70pKgDbVN4rFpbH
 console
 submit szewczyk.mira@gmail.com T70pKgDbVN4rFpbH
+console
+Map("1" -> 2)
+Map[Char, Int]("1" -> 2)
+import scala.collection.immutable._
+console
+submit szewczyk.mira@gmail.com T70pKgDbVN4rFpbH
